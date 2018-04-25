@@ -1,0 +1,8 @@
+.list-item {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.summary {
+    flex-shrink: 0;
+}

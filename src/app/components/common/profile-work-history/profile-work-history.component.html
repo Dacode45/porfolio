@@ -1,0 +1,28 @@
+<div>
+  <h2>Work</h2>
+  <mat-list>
+    <mat-list-item class="list-item" *ngFor="let h of history">
+      <mat-icon matListIcon>folder</mat-icon>
+      <span matLine>  
+        <h4 >{{h.title}} @ {{h.company}}, {{h.location}}</h4>
+        <h5>{{h.from}}</h5>
+      </span>
+        <mat-expansion-panel matLine *ngFor="let desc of h.descriptions">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="summary">
+              <span>
+                {{desc.summary}}
+              </span>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{desc.snippet}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>
+            <p *ngFor="let text of desc.text">{{text}}</p>
+          </div>
+        </mat-expansion-panel>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
